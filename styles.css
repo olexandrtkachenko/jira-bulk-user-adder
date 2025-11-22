@@ -1,0 +1,344 @@
+/* Jira Bulk User Adder - Styles */
+
+/* Floating button to activate plugin */
+.bulk-floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #0052cc 0%, #0065ff 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 82, 204, 0.4);
+  z-index: 2147483646 !important;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.bulk-floating-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 82, 204, 0.6);
+}
+
+.bulk-floating-btn:active {
+  transform: scale(0.95);
+}
+
+/* Main container */
+.bulk-user-container {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 400px;
+  background: #ffffff;
+  border: 2px solid #0052cc;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  z-index: 2147483647 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  pointer-events: auto !important;
+  max-height: 90vh;
+  overflow-y: auto;
+  isolation: isolate;
+  transition: box-shadow 0.2s ease;
+}
+
+.bulk-user-container.dragging {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  cursor: move;
+}
+
+.bulk-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #0052cc 0%, #0065ff 100%);
+  color: white;
+  border-radius: 6px 6px 0 0;
+  cursor: move;
+  pointer-events: auto;
+  user-select: none;
+}
+
+.bulk-header:hover {
+  background: linear-gradient(135deg, #0065ff 0%, #0052cc 100%);
+}
+
+.bulk-header:active {
+  cursor: grabbing;
+}
+
+.bulk-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.bulk-content {
+  padding: 16px;
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 2147483647 !important;
+}
+
+.bulk-input-section {
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2147483647 !important;
+  pointer-events: auto !important;
+}
+
+.bulk-input-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #172b4d;
+}
+
+.bulk-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #dfe1e6;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+  min-height: 120px;
+  box-sizing: border-box;
+  background: #fff !important;
+  color: #000;
+  position: relative !important;
+  z-index: 2147483647 !important;
+  pointer-events: auto !important;
+  isolation: isolate;
+  touch-action: auto !important;
+}
+
+.bulk-textarea:hover {
+  border-color: #0052cc;
+  cursor: text;
+}
+
+.bulk-textarea:focus {
+  outline: 2px solid #0052cc;
+  border-color: #0052cc;
+}
+
+.bulk-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.bulk-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bulk-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.bulk-btn-primary {
+  background: #0052cc;
+  color: white;
+}
+
+.bulk-btn-primary:hover:not(:disabled) {
+  background: #0065ff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 82, 204, 0.3);
+}
+
+.bulk-btn-danger {
+  background: #de350b;
+  color: white;
+}
+
+.bulk-btn-danger:hover:not(:disabled) {
+  background: #ff5630;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(222, 53, 11, 0.3);
+}
+
+.bulk-btn-secondary {
+  background: #f4f5f7;
+  color: #172b4d;
+  flex: 0.5;
+}
+
+.bulk-btn-secondary:hover:not(:disabled) {
+  background: #ebecf0;
+}
+
+.bulk-btn-small {
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bulk-btn-small:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.bulk-status {
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-bottom: 12px;
+  animation: fadeIn 0.3s;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.bulk-status-info {
+  background: #e3f2fd;
+  color: #1976d2;
+  border-left: 4px solid #1976d2;
+}
+
+.bulk-status-processing {
+  background: #fff3e0;
+  color: #f57c00;
+  border-left: 4px solid #f57c00;
+}
+
+.bulk-status-success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-left: 4px solid #2e7d32;
+}
+
+.bulk-status-warning {
+  background: #fff8e1;
+  color: #f57f17;
+  border-left: 4px solid #f57f17;
+}
+
+.bulk-status-error {
+  background: #ffebee;
+  color: #c62828;
+  border-left: 4px solid #c62828;
+}
+
+.bulk-settings {
+  margin-top: 12px;
+}
+
+.bulk-settings summary {
+  cursor: pointer;
+  padding: 8px;
+  background: #f4f5f7;
+  border-radius: 4px;
+  font-size: 13px;
+  user-select: none;
+}
+
+.bulk-settings summary:hover {
+  background: #ebecf0;
+}
+
+.bulk-footer {
+  margin-top: 12px;
+  padding: 12px 8px;
+  text-align: center;
+  border-top: 1px solid #dfe1e6;
+}
+
+.bulk-footer small {
+  color: #5e6c84;
+  font-size: 11px;
+}
+
+.bulk-author-link {
+  color: #0052cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.bulk-author-link:hover {
+  text-decoration: underline;
+  color: #0065ff;
+}
+
+.bulk-settings-content {
+  padding: 12px 8px 8px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bulk-settings-content label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #5e6c84;
+}
+
+.bulk-settings-content input {
+  width: 100px;
+  padding: 4px 8px;
+  border: 1px solid #dfe1e6;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+/* Make it draggable (visual hint) */
+.bulk-header {
+  user-select: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bulk-user-container {
+    width: calc(100% - 40px);
+    right: 20px;
+  }
+}
+
+/* Animation for when processing */
+.bulk-status-processing::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  border: 2px solid #f57c00;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
