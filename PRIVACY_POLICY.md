@@ -1,6 +1,6 @@
-# Privacy Policy for Jira Bulk User Adder
+# Privacy Policy for Jira Bulk User Adder & Jira Automation Toolkit
 
-**Last Updated:** November 22, 2024
+**Last Updated:** November 27, 2025
 
 ## Overview
 
@@ -174,5 +174,7 @@ This Extension complies with:
 
 **Jira Bulk User Adder**
 Version 1.7.2
-November 22, 2024
+**Jira Automation Toolkit**
+Version 3.0.0
+November 27, 2025
 
